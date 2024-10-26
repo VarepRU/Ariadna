@@ -1,0 +1,18 @@
+{
+  "key.ariadna.result": "Show Optimal X",
+  "key.ariadna.sum": "Count blocks in area",
+
+  "category.ariadna.main": "Ariadna",
+
+  "text.autoconfig.ariadna.title": "Ariadna",
+  "text.autoconfig.ariadna.option.RADIUS": "Radius of XZ dimensions(square)",
+  "text.autoconfig.ariadna.option.Y_RADIUS": "Central Y coord",
+  "text.autoconfig.ariadna.option.Y_LEVEL": "Radius of Y scan area",
+  "text.autoconfig.ariadna.option.LAVA": "Sensitivity to lava blocks, while choosing optimal route",
+  "text.autoconfig.ariadna.option.LAVA.@Toooltip": "Less number - more sensitive",
+  "text.autoconfig.ariadna.option.VEIN_RADIUS": "Estimated radius of veins, for vanilla 3 is optimal",
+  "text.autoconfig.ariadna.option.VEIN_RADIUS.@Tooltip": "I don't recommend you to set this too high for perfomance issues",
+
+  "msg.ariadna.result": "Best line is X = %s , %s blocks ",
+  "msg.ariadna.sum": "%s blocks in area"
+}
