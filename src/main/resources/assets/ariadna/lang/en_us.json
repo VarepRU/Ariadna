@@ -8,6 +8,7 @@
   "text.autoconfig.ariadna.option.RADIUS": "Radius of XZ dimensions(square)",
   "text.autoconfig.ariadna.option.Y_RADIUS": "Y radius of area to scan",
   "text.autoconfig.ariadna.option.Y_LEVEL": "Y layer where you are going to mine",
+  "text.autoconfig.ariadna.option.configBlock": "Target block",
 
   "msg.ariadna.result": "Best line is X = %s, total %s blocks",
   "msg.ariadna.sum": "%s blocks in area",
