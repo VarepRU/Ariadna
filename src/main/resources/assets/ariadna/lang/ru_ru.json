@@ -6,13 +6,13 @@
 
   "text.autoconfig.ariadna.title": "Ариадна",
   "text.autoconfig.ariadna.option.RADIUS": "Радиус квадрата по координатам XZ",
-  "text.autoconfig.ariadna.option.Y_RADIUS": "Y координата зоны поиска",
-  "text.autoconfig.ariadna.option.Y_LEVEL": "Вынос по высоте",
-  "text.autoconfig.ariadna.option.LAVA": "Чувствительность к лаве при определении оптимального маршрута",
-  "text.autoconfig.ariadna.option.LAVA.@Toooltip": "Чем меньше значение, тем чувствительнее",
-  "text.autoconfig.ariadna.option.VEIN_RADIUS": "Оценочный радиус жилы, для ваниллы 3 оптимально",
-  "text.autoconfig.ariadna.option.VEIN_RADIUS.@Tooltip": "Не рекомендую выставлять слишком большой радиус, поскольку вызовет много лишних вычислений",
+  "text.autoconfig.ariadna.option.Y_RADIUS": "Y координата по которой вы будете копать",
+  "text.autoconfig.ariadna.option.Y_LEVEL": "Y радиус",
 
-  "msg.ariadna.result": "Лучшая линия для раскопок X = %s , %s блоков",
-  "msg.ariadna.sum": "В области поиска найдено %s блоков"
+  "msg.ariadna.result": "Лучшая линия для раскопок X = %s, всего %s блоков",
+  "msg.ariadna.sum": "В области поиска найдено %s блоков",
+
+  "msg.ariadna.3dnorth": "[Z-] Сканируем в северном направлении",
+  "msg.ariadna.3dsouth": "[Z+] Сканируем в южном направлении",
+  "msg.ariadna.wrongdir": "Вам нужно смотреть на север или на юг"
 }
