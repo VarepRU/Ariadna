@@ -1,6 +1,6 @@
 {
-  "key.ariadna.result": "Вывести оптимальный X",
-  "key.ariadna.sum": "Всего алмазов в хоне поиска",
+  "key.ariadna.result": "Найти оптимальный X",
+  "key.ariadna.sum": "Всего алмазов в зоне поиска",
 
   "category.ariadna.main": "Ариадна",
 
@@ -10,10 +10,12 @@
   "text.autoconfig.ariadna.option.Y_LEVEL": "Y радиус",
   "text.autoconfig.ariadna.option.configBlock": "Блок",
 
-  "msg.ariadna.result": "Лучшая линия для раскопок X = %s, всего %s блоков",
+  "msg.ariadna.result": "Лучшая линия для раскопок %s = %s, всего %s блоков",
   "msg.ariadna.sum": "В области поиска найдено %s блоков",
 
   "msg.ariadna.3dnorth": "[Z-] Сканируем в северном направлении",
   "msg.ariadna.3dsouth": "[Z+] Сканируем в южном направлении",
+  "msg.ariadna.3dwest": "[X-] Сканируем в западном направлении",
+  "msg.ariadna.3deast": "[X+] Сканируем в восточном направлении",
   "msg.ariadna.wrongdir": "Вам нужно смотреть на север или на юг"
 }

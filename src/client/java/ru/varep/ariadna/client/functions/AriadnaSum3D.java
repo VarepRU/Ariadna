@@ -1,4 +1,4 @@
-package ru.varep.ariadna.client;
+package ru.varep.ariadna.client.functions;
 
 public class AriadnaSum3D {
     public static int sumArray(int[][][] array) {

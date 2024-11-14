@@ -10,10 +10,10 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "ru.varep.ariadna.client.AriadnaClient"
+      "ru.varep.ariadna.client.Ariadna"
     ],
     "modmenu": [
-      "ru.varep.ariadna.client.util.AriadnaModMenu"
+      "ru.varep.ariadna.client.config.AriadnaModMenu"
     ]
   },
 

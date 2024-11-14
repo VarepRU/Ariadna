@@ -5,15 +5,21 @@
   "category.ariadna.main": "Ariadna",
 
   "text.autoconfig.ariadna.title": "Ariadna",
+  "text.autoconfig.ariadna.option.SOURCE": "Area source for scanner",
+  "text.autoconfig.ariadna.option.DIR": "Profit line search mode",
   "text.autoconfig.ariadna.option.RADIUS": "Radius of XZ dimensions(square)",
   "text.autoconfig.ariadna.option.Y_RADIUS": "Y radius of area to scan",
   "text.autoconfig.ariadna.option.Y_LEVEL": "Y layer where you are going to mine",
   "text.autoconfig.ariadna.option.configBlock": "Target block",
+  "text.autoconfig.ariadna.option.direction": "Direction mode",
 
-  "msg.ariadna.result": "Best line is X = %s, total %s blocks",
+  "msg.ariadna.result": "Best line is %s = %s, total %s blocks",
   "msg.ariadna.sum": "%s blocks in area",
 
   "msg.ariadna.3dnorth": "[Z-] Scanning in North direction",
   "msg.ariadna.3dsouth": "[Z+] Scanning in South direction",
-  "msg.ariadna.wrongdir": "You should look north or south"
+  "msg.ariadna.3dwest": "[X-] Scanning in West direction",
+  "msg.ariadna.3deast": "[X+] Scanning in East direction",
+
+  "msg.ariadna.wrongdir": "Wrong directions for scanning"
 }
