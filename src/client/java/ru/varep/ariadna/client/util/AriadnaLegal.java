@@ -29,7 +29,8 @@ public class AriadnaLegal {
     public static List<String> getOffline() {
         List<String> blacklist = new ArrayList<>();
         blacklist.add("subserver.ru");
-        blacklist.add("varep.ru");
+        blacklist.add("de.subserver.ru");
+        blacklist.add("us.subserver.ru");
 
         return blacklist;
     }
