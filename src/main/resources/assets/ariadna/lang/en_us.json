@@ -20,6 +20,7 @@
   "msg.ariadna.3dsouth": "[Z+] Scanning in South direction",
   "msg.ariadna.3dwest": "[X-] Scanning in West direction",
   "msg.ariadna.3deast": "[X+] Scanning in East direction",
+  "msg.ariadna.wrongdir": "Wrong directions for scanning",
 
-  "msg.ariadna.wrongdir": "Wrong directions for scanning"
+  "msg.ariadna.unlegal": "Mod creator don't want u to use Ariadna on this server"
 }

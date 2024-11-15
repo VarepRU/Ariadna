@@ -1,5 +1,6 @@
 package ru.varep.ariadna.client.util;
 
+import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -14,27 +15,35 @@ import java.util.regex.Pattern;
 
 public class AriadnaLegal {
 
-    public static final String url = "http://ariadnalegal.varep.ru";
+    public static final String url = "https://ariadnalegal.varep.ru";
 
-    public boolean check() {
-        boolean res = false;
-        try {
+    public static List<String> getLegal() throws IOException {
+       List<String> offline = getOffline();
+       List<String> online = getServers();
+       List<String> legal = new ArrayList<>(offline);
+       legal.addAll(online);
+       return legal;
+    }
 
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return res;
+
+    public static List<String> getOffline() {
+        List<String> blacklist = new ArrayList<>();
+        blacklist.add("subserver.ru");
+        blacklist.add("varep.ru");
+
+        return blacklist;
     }
 
     public static List<String> getServers() throws IOException {
         List<String> servers = new ArrayList<>();
         try (CloseableHttpClient client = HttpClientBuilder.create().build()) {
             HttpGet req = new HttpGet(url);
-            org.apache.http.HttpResponse response = client.execute(req);
+            HttpResponse response = client.execute(req);
 
             if (response.getStatusLine().getStatusCode() == 200) {
+                System.out.println("Blacklist server connected. Status:" + response.getStatusLine().getStatusCode());
                 String html = EntityUtils.toString(response.getEntity());
-                Pattern pattern = Pattern.compile("<h2.*?>(.*?)</h2>", Pattern.DOTALL);
+                Pattern pattern = Pattern.compile("<h1.*?>(.*?)</h1>", Pattern.DOTALL);
                 Matcher matcher = pattern.matcher(html);
 
                 while (matcher.find()) {
@@ -48,7 +57,10 @@ public class AriadnaLegal {
         }
         return servers;
     }
+
 }
+
+
 
 
 
