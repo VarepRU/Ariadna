@@ -45,13 +45,6 @@ public class Ariadna implements ClientModInitializer {
     public void onInitializeClient() {
 
         blacklist = AriadnaLegal.getOffline();
-
-        System.out.println("[ARIADNA] Blacklisted servers: " + blacklist.size());
-
-        for (int l = 0; l < blacklist.size(); l++) {
-            System.out.println(l + ": " + blacklist.get(l));
-        }
-
         AutoConfig.register(AriadnaConfig.class, Toml4jConfigSerializer::new);
         KeyBindings.ALL.forEach(KeyBindingHelper::registerKeyBinding);
 
@@ -61,19 +54,15 @@ public class Ariadna implements ClientModInitializer {
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             try {
                 blacklist.addAll(AriadnaLegal.getServers());
-                System.out.println("[ARIADNA] Blacklist updated: " + blacklist.size() + " servers");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
             String ip = "local";
             if (client.getCurrentServerEntry() != null ) {
                 ip = client.getCurrentServerEntry().address;
-                System.out.println("[ARIADNA] Server IP: " + ip);
             }
             if (blacklist.contains(ip)) {
                 legal = false;
-                System.out.println("[ARIADNA] You logged on illegal server: " + ip);
-
             }
         });
 
