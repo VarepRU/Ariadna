@@ -12,7 +12,6 @@ public class AriadnaCount3D {
         int dRadius = cfg.RADIUS;
         int[][][] a = Ariadna3D.convert3D(mc.player, dRadius);
         if (a != null) {
-            System.out.println("BlockArray created, calculating...");
             int res = AriadnaSum3D.sumArray(a);
             MinecraftClient.getInstance().player.sendMessage(Text.translatable("msg.ariadna.sum", res), false);
         }
