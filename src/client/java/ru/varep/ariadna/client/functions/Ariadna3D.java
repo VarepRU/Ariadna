@@ -62,6 +62,7 @@ public class Ariadna3D {
         int width = maxX - minX + 1;
         int height = maxY - minY + 1;
 
+
         int[][][] result3D = new int[width][height][depth];
             for (int x = 0; x < width; x++) {
                 for (int y = 0; y < height; y++) {
@@ -70,7 +71,7 @@ public class Ariadna3D {
                         if (player.getWorld().getBlockState(pos).getBlock() == cfg.getter()) {
                             result3D[x][y][z] = 1;
                         } else if (player.getWorld().getBlockState(pos).getBlock() == Blocks.LAVA) { //will be in future updates
-                            result3D[x][y][z] = -1;
+                            result3D[x][y][z] = 1000;
                         } else {
                             result3D[x][y][z] = 0;
                         }

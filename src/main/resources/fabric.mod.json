@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "ariadna",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "name": "Ariadna",
   "description": "This mod helps to find optimal routes to mine diamonds",
   "authors": ["varep"],

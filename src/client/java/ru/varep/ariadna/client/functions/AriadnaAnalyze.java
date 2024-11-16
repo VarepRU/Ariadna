@@ -24,15 +24,15 @@ public class AriadnaAnalyze {
             int pos = 0;
             switch (cfg.DIR) {
                 case X:
-                    sums = AriadnaScannerHelper.calculateX(clusters.array, clusters.clusters);
+                    sums = AriadnaScannerHelper.calculateX(clusters.array, clusters.clusters, clusters.lavas, cfg.LAVA_CHECK, cfg.LAVA_SIZE);
                     pos = mc.player.getBlockPos().getX();
                     break;
                 case Z:
-                    sums = AriadnaScannerHelper.calculateZ(clusters.array, clusters.clusters);
+                    sums = AriadnaScannerHelper.calculateZ(clusters.array, clusters.clusters, clusters.lavas, cfg.LAVA_CHECK, cfg.LAVA_SIZE);
                     pos = mc.player.getBlockPos().getZ();
                     break;
             }
-            int maxLine = AriadnaScannerHelper.maxLine(sums) + pos - dRadius + 1;
+            int maxLine = AriadnaScannerHelper.maxLine(sums) + pos - dRadius;
             int maxCount = AriadnaScannerHelper.maxCount(sums);
 
             MinecraftClient.getInstance().player.sendMessage(Text.translatable("msg.ariadna.result",cfg.DIR, maxLine, maxCount), false);

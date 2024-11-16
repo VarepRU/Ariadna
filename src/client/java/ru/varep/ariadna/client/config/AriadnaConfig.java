@@ -24,10 +24,13 @@ public class AriadnaConfig implements ConfigData {
     public int Y_LEVEL = -58;
     @ConfigEntry.BoundedDiscrete(min = 1, max = 180)
     public int Y_RADIUS = 3;
-
-
     @ConfigEntry.Gui.Tooltip()
     public String configBlock = "deepslate_diamond_ore";
+    public boolean LAVA_CHECK = true;
+    public int LAVA_SIZE = 12;
+
+
+
 
     public Block getter() {
         Block b = Registries.BLOCK.get(Identifier.tryParse(configBlock));
