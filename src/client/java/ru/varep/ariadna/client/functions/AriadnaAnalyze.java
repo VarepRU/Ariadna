@@ -17,10 +17,8 @@ public class AriadnaAnalyze {
 
         int dRadius = cfg.RADIUS;
         String dir = "";
-        System.out.println("Scanning in radius: " + dRadius);
         int[][][] a = Ariadna3D.convert3D(mc.player, dRadius);
         if (a != null) {
-            System.out.println("BlockArray created, calculating...");
             AriadnaCluster clusters = AriadnaCluster.calc(a);
             int[] sums = null;
             int pos = 0;

@@ -11,13 +11,6 @@ import net.minecraft.util.Identifier;
 @Config(name = "ariadna")
 public class AriadnaConfig implements ConfigData {
 
-
-    @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-    public Source3D SOURCE = Source3D.client;
-
-    @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-    public DirXZ DIR = DirXZ.X;
-
     @ConfigEntry.BoundedDiscrete(min = 1, max = 256)
     public int RADIUS = 64;
     @ConfigEntry.BoundedDiscrete(min = -64, max = 320)
@@ -29,9 +22,6 @@ public class AriadnaConfig implements ConfigData {
     public boolean LAVA_CHECK = true;
     public int LAVA_SIZE = 12;
 
-
-
-
     public Block getter() {
         Block b = Registries.BLOCK.get(Identifier.tryParse(configBlock));
         if (b == null) {
@@ -39,16 +29,6 @@ public class AriadnaConfig implements ConfigData {
             b = Registries.BLOCK.get(Identifier.ofVanilla("deepslate_diamond_ore"));
         }
         return b;
-    }
-
-    public enum DirXZ {
-        X,
-        Z
-    }
-
-    public enum Source3D {
-        seed,
-        client
     }
 
 }
