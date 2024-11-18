@@ -15,6 +15,7 @@
 
   "msg.ariadna.result": "Best line is %s = %s, total %s blocks",
   "msg.ariadna.sum": "%s blocks in area",
+  "msg.ariadna.vein": "%s veins in area",
 
   "msg.ariadna.3dnorth": "[Z-] Scanning in North direction",
   "msg.ariadna.3dsouth": "[Z+] Scanning in South direction",

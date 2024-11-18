@@ -11,7 +11,7 @@ import ru.varep.ariadna.client.util.DirectionHelper;
 
 public class Ariadna3D {
 
-    public static int[][][] convert3D(PlayerEntity player, int radius) {
+    public static int[][][] convert3D(PlayerEntity player, int radius, int depth) {
 
         BlockPos playerPos = player.getBlockPos();
         AriadnaConfig cfg = AutoConfig.getConfigHolder(AriadnaConfig.class).getConfig();
@@ -33,13 +33,13 @@ public class Ariadna3D {
 
         switch (dir) {
             case 1: //North
-                minZ = pZ - radius;
+                minZ = pZ - depth;
                 maxZ = pZ;
                 MinecraftClient.getInstance().player.sendMessage(Text.translatable("msg.ariadna.3dnorth"));
                 break;
             case 2: //South
                 minZ = pZ;
-                maxZ = pZ + radius;
+                maxZ = pZ + depth;
                 MinecraftClient.getInstance().player.sendMessage(Text.translatable("msg.ariadna.3dsouth"));
                 break;
             case 3: // East
@@ -57,20 +57,18 @@ public class Ariadna3D {
                 break;
         }
 
+        int d = maxZ - minZ + 1;
+        int w = maxX - minX + 1;
+        int h = maxY - minY + 1;
 
-        int depth = maxZ - minZ + 1;
-        int width = maxX - minX + 1;
-        int height = maxY - minY + 1;
-
-
-        int[][][] result3D = new int[width][height][depth];
-            for (int x = 0; x < width; x++) {
-                for (int y = 0; y < height; y++) {
-                    for (int z = 0; z < depth; z++) {
+        int[][][] result3D = new int[w][h][d];
+            for (int x = 0; x < w; x++) {
+                for (int y = 0; y < h; y++) {
+                    for (int z = 0; z < d; z++) {
                         BlockPos pos = new BlockPos(minX + x, minY + y, minZ + z);
                         if (player.getWorld().getBlockState(pos).getBlock() == cfg.getter()) {
                             result3D[x][y][z] = 1;
-                        } else if (player.getWorld().getBlockState(pos).getBlock() == Blocks.LAVA) { //will be in future updates
+                        } else if (player.getWorld().getBlockState(pos).getBlock() == Blocks.LAVA) {
                             result3D[x][y][z] = 1000;
                         } else {
                             result3D[x][y][z] = 0;

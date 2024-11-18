@@ -12,8 +12,10 @@ import net.minecraft.util.Identifier;
 public class AriadnaConfig implements ConfigData {
 
     @ConfigEntry.BoundedDiscrete(min = 1, max = 256)
-    public int RADIUS = 64;
-    @ConfigEntry.BoundedDiscrete(min = -64, max = 320)
+    public int RADIUS = 32;
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 256)
+    public int DEPTH = 64;
+    //@ConfigEntry.BoundedDiscrete(min = -64, max = 320)
     public int Y_LEVEL = -58;
     @ConfigEntry.BoundedDiscrete(min = 1, max = 180)
     public int Y_RADIUS = 3;

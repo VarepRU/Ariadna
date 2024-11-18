@@ -17,6 +17,12 @@ public class KeyBindings {
             GLFW.GLFW_KEY_END,
             "category.ariadna.main");
 
+    public static KeyBinding VEIN_KEY = new KeyBinding(
+            "key.ariadna.vein",
+            InputUtil.Type.KEYSYM,
+            GLFW.GLFW_KEY_EQUAL,
+            "category.ariadna.main");
+
     public static final List<KeyBinding> ALL = List.of(
             RESULT_KEY,
             SUM_KEY

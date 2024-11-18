@@ -22,7 +22,7 @@ public class AriadnaScannerHelper {
                 for (int y = 0; y < yLen[currentX]; y++) {
                     for (int z = 0; z < zLen; z++) {
                         int b = array[currentX][y][z];
-                        if (b > 1000) {
+                        if (b > 1000 && lavaCheck) {
                             Integer curlavaSize = lavas.get(b);
                             if (curlavaSize != null && curlavaSize >= lavaSize) {
                                 lavaFound = true;

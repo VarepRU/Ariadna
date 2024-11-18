@@ -16,8 +16,9 @@ public class AriadnaAnalyze {
         AriadnaConfig cfg = AutoConfig.getConfigHolder(AriadnaConfig.class).getConfig();
 
         int dRadius = cfg.RADIUS;
+        int depth = cfg.DEPTH;
         String dir = "";
-        int[][][] a = Ariadna3D.convert3D(mc.player, dRadius);
+        int[][][] a = Ariadna3D.convert3D(mc.player, dRadius, depth);
         if (a != null) {
             AriadnaCluster clusters = AriadnaCluster.calc(a);
             int[] sums = null;

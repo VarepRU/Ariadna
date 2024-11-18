@@ -27,7 +27,6 @@ public class AriadnaCluster {
                         cluster++;
 
                     }
-
                     if (array[x][y][z] == 1000) {
                         lavas.put(lava, MarkNearby(array, x, y, z, lava));
                         lava++;

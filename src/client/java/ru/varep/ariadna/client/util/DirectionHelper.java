@@ -15,4 +15,15 @@ public class DirectionHelper {
             default -> 0;
         };
     }
+
+    public static String getDirLetter(PlayerEntity player) {
+        Direction facing = player.getHorizontalFacing();
+        return switch (facing) {
+            case NORTH -> "Z-";
+            case SOUTH -> "Z+";
+            case EAST -> "X+";
+            case WEST -> "X-";
+            default -> "[error]";
+        };
+    }
 }

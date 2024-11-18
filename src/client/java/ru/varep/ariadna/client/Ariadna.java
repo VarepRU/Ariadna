@@ -85,7 +85,14 @@ public class Ariadna implements ClientModInitializer {
             }
             if (KeyBindings.SUM_KEY.wasPressed()) {
                 if (legal) {
-                    AriadnaCount3D.process(mc);
+                    AriadnaCount3D.BlockCount(mc);
+                } else {
+                    mc.player.sendMessage(Text.translatable("msg.ariadna.unlegal"));
+                }
+            }
+            if (KeyBindings.VEIN_KEY.wasPressed()) {
+                if (legal) {
+                    AriadnaCount3D.VeinCount(mc);
                 } else {
                     mc.player.sendMessage(Text.translatable("msg.ariadna.unlegal"));
                 }
