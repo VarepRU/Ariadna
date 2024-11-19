@@ -42,7 +42,7 @@ public class AriadnaLegal {
             HttpResponse response = client.execute(req);
 
             if (response.getStatusLine().getStatusCode() == 200) {
-                System.out.println("Blacklist server connected. Status:" + response.getStatusLine().getStatusCode());
+                System.out.println("Sync blacklist. Status:" + response.getStatusLine().getStatusCode());
                 String html = EntityUtils.toString(response.getEntity());
                 Pattern pattern = Pattern.compile("<h1.*?>(.*?)</h1>", Pattern.DOTALL);
                 Matcher matcher = pattern.matcher(html);

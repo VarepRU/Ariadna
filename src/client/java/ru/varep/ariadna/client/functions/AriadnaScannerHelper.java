@@ -50,6 +50,7 @@ public class AriadnaScannerHelper {
         return sumArray;
     }
 
+    //rewrite to check in Y_LEVEL+1
     static int[] calculateZ(int[][][] array, Map<Integer, Integer> clusters, Map<Integer, Integer> lavas, boolean lavaCheck, int lavaSize) {
         int[] sumArray = new int[array[0][0].length];
         int xLen = array.length;
@@ -114,7 +115,4 @@ public class AriadnaScannerHelper {
         }
         return maxLine;
     }
-
-
-
 }
