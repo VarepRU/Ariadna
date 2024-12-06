@@ -13,7 +13,7 @@ public class AriadnaCount3D {
         int depth = cfg.DEPTH;
         int[][][] a = Ariadna3D.convert3D(mc.player, dRadius, depth);
         if (a != null) {
-            int res = AriadnaSum3D.sumArray(a);
+            int res = sumArray(a);
             MinecraftClient.getInstance().player.sendMessage(Text.translatable("msg.ariadna.sum", res), false);
         }
     }
@@ -29,6 +29,20 @@ public class AriadnaCount3D {
             MinecraftClient.getInstance().player.sendMessage(Text.translatable("msg.ariadna.vein", res), false);
 
         }
+    }
+
+    public static int sumArray(int[][][] array) {
+        int sumInt = 0;
+        for (int x = 0; x < array.length; x++) {
+            for (int y = 0; y < array[x].length; y++) {
+                for (int z = 0; z < array[x][y].length; z++) {
+                    if (array[x][y][z] == 1) {
+                        sumInt++;
+                    }
+                }
+            }
+        }
+        return sumInt;
     }
 
 }

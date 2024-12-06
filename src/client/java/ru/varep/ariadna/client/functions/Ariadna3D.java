@@ -11,6 +11,8 @@ import ru.varep.ariadna.client.util.DirectionHelper;
 
 public class Ariadna3D {
 
+
+
     public static int[][][] convert3D(PlayerEntity player, int radius, int depth) {
 
         BlockPos playerPos = player.getBlockPos();

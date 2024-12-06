@@ -17,15 +17,6 @@ public class AriadnaLegal {
 
     public static final String url = "https://ariadnalegal.varep.ru";
 
-    public static List<String> getLegal() throws IOException {
-       List<String> offline = getOffline();
-       List<String> online = getServers();
-       List<String> legal = new ArrayList<>(offline);
-       legal.addAll(online);
-       return legal;
-    }
-
-
     public static List<String> getOffline() {
         List<String> blacklist = new ArrayList<>();
         blacklist.add("subserver.ru");
